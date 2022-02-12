@@ -5,12 +5,12 @@ services:
     restart: always
     build: .
     ports:
-      - 8080:8080
+      - "8080:8080"
     depends_on:
       - app_redis
     env_file:
       - configs/.env
   app_redis:
-    image: redis
+    image: "redis"
     ports:
-      - 6379:6379
+      - "6379:6379"
