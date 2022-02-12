@@ -22,6 +22,7 @@ type ShorterURLDelivery struct {
 }
 
 func (s *ShorterURLDelivery) Encode(w http.ResponseWriter, r *http.Request) {
+	logger.Debugf("[ShorterURLDelivery] Encode")
 	m := make(map[string]interface{})
 	defer func() {
 		bytes, _ := json.Marshal(m)
@@ -52,6 +53,7 @@ func (s *ShorterURLDelivery) Encode(w http.ResponseWriter, r *http.Request) {
 }
 
 func (s *ShorterURLDelivery) Redirect(w http.ResponseWriter, r *http.Request) {
+	logger.Debugf("[ShorterURLDelivery] Redirect")
 	vars := mux.Vars(r)
 	id, ok := vars["id"]
 	if !ok {

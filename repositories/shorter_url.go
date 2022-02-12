@@ -55,7 +55,7 @@ func (s *ShorterURL) Get(key interface{}) (url string, err error) {
 	}
 	url, err = s.client.Get(k).Result()
 	if err != nil {
-		logger.Error("[ShorterURL] Get key error: %s", err)
+		logger.Errorf("[ShorterURL] Get key error: %s", err)
 	}
 	return
 }
