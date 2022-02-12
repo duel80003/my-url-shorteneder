@@ -1,4 +1,4 @@
-module github.com/duel80003/my-url-shorter
+module github.com/duel80003/my-url-shorteneder
 
 go 1.17
 

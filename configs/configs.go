@@ -1,7 +1,7 @@
 package configs
 
 import (
-	"github.com/duel80003/my-url-shorter/tools"
+	"github.com/duel80003/my-url-shorteneder/tools"
 	"github.com/joho/godotenv"
 )
 

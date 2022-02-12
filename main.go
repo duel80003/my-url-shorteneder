@@ -2,16 +2,16 @@ package main
 
 import (
 	"context"
-	"github.com/duel80003/my-url-shorter/tools"
+	"github.com/duel80003/my-url-shorteneder/tools"
 	"log"
 	"net/http"
 	"os"
 	"os/signal"
 	"time"
 
-	_ "github.com/duel80003/my-url-shorter/configs"
-	_ "github.com/duel80003/my-url-shorter/drivers"
-	"github.com/duel80003/my-url-shorter/router"
+	_ "github.com/duel80003/my-url-shorteneder/configs"
+	_ "github.com/duel80003/my-url-shorteneder/drivers"
+	"github.com/duel80003/my-url-shorteneder/router"
 )
 
 var logger = tools.Logger

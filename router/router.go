@@ -1,7 +1,7 @@
 package router
 
 import (
-	"github.com/duel80003/my-url-shorter/deliveries"
+	"github.com/duel80003/my-url-shorteneder/deliveries"
 	"github.com/gorilla/mux"
 	"net/http"
 	"os"

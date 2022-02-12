@@ -2,8 +2,8 @@ package deliveries
 
 import (
 	"encoding/json"
-	"github.com/duel80003/my-url-shorter/tools"
-	"github.com/duel80003/my-url-shorter/usecases"
+	"github.com/duel80003/my-url-shorteneder/tools"
+	"github.com/duel80003/my-url-shorteneder/usecases"
 	"github.com/gorilla/mux"
 	"io/ioutil"
 	"net/http"

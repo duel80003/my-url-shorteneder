@@ -1,9 +1,9 @@
 package repositories
 
 import (
-	"github.com/duel80003/my-url-shorter/drivers"
-	"github.com/duel80003/my-url-shorter/entities"
-	"github.com/duel80003/my-url-shorter/tools"
+	"github.com/duel80003/my-url-shorteneder/drivers"
+	"github.com/duel80003/my-url-shorteneder/entities"
+	"github.com/duel80003/my-url-shorteneder/tools"
 	"github.com/go-redis/redis"
 	"os"
 	"strconv"

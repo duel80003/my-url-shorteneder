@@ -5,9 +5,9 @@ import (
 	"github.com/jxskiss/base62"
 	"os"
 
-	"github.com/duel80003/my-url-shorter/entities"
-	"github.com/duel80003/my-url-shorter/repositories"
-	"github.com/duel80003/my-url-shorter/tools"
+	"github.com/duel80003/my-url-shorteneder/entities"
+	"github.com/duel80003/my-url-shorteneder/repositories"
+	"github.com/duel80003/my-url-shorteneder/tools"
 	"github.com/teris-io/shortid"
 )
 
