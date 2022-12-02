@@ -35,6 +35,7 @@ func main() {
 			logger.Println(err)
 		}
 	}()
+
 	logger.Infof("server run on %s", srv.Addr)
 	c := make(chan os.Signal, 1)
 	// We'll accept graceful shutdowns when quit via SIGINT (Ctrl+C)
