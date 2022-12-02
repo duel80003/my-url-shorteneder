@@ -5,7 +5,6 @@ import (
 	"github.com/duel80003/my-url-shorteneder/tools"
 	"github.com/duel80003/my-url-shorteneder/usecases"
 	"github.com/gorilla/mux"
-	"io/ioutil"
 	"net/http"
 )
 
@@ -29,9 +28,13 @@ func (s *ShorterURLDelivery) Encode(w http.ResponseWriter, r *http.Request) {
 		_ = r.Body.Close()
 		_, _ = w.Write(bytes)
 	}()
-	body, err := ioutil.ReadAll(r.Body)
 	reqMap := make(map[string]interface{})
-	err = json.Unmarshal(body, &reqMap)
+	err := json.NewDecoder(r.Body).Decode(&reqMap)
+	if err != nil {
+		w.WriteHeader(http.StatusBadRequest)
+		m["message"] = "Bad request"
+		return
+	}
 	url, ok1 := reqMap["url"]
 	str, ok2 := url.(string)
 	if !ok1 || !ok2 {

@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"fmt"
 	"github.com/duel80003/my-url-shorteneder/tools"
 	"log"
 	"net/http"
@@ -9,7 +10,6 @@ import (
 	"os/signal"
 	"time"
 
-	_ "github.com/duel80003/my-url-shorteneder/configs"
 	_ "github.com/duel80003/my-url-shorteneder/drivers"
 	"github.com/duel80003/my-url-shorteneder/router"
 )
@@ -19,9 +19,9 @@ var logger = tools.Logger
 func main() {
 	r := router.HttpRouters()
 	// Add your routes as needed
-
+	host := fmt.Sprintf("0.0.0.0:%s", os.Getenv("PORT"))
 	srv := &http.Server{
-		Addr: "0.0.0.0:8080",
+		Addr: host,
 		// Good practice to set timeouts to avoid Slowloris attacks.
 		WriteTimeout: time.Second * 15,
 		ReadTimeout:  time.Second * 15,
